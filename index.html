@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- Head content such as meta tags and encoding options, etc -->
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="index, follow" />
+		<meta name="generator" content="RapidWeaver" />
+		
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Layout page | My Website">
+	<meta name="twitter:url" content="https://layout-app.com/index.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="My Website">
+	<meta property="og:title" content="Layout page | My Website">
+	<meta property="og:url" content="https://layout-app.com/index.html">
+
+	<!-- User defined head content -->
+	
+
+  <!-- Browser title -->
+	<title>Layout page | My Website</title>
+
+  <!-- Main Theme Stylesheet -->
+	<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/Foundry/consolidated.css?rwcache=774334763" />
+		
+
+	<!-- RapidWeaver Color Picker Stylesheet -->
+	
+
+	<!-- Plugin injected code -->
+			<link rel='stylesheet' type='text/css' media='all' href='rw_common/plugins/stacks/stacks.css?rwcache=774334763' />
+		<link rel='stylesheet' type='text/css' media='all' href='files/stacks_page_page0.css?rwcache=774334763' />
+        <script type='text/javascript' charset='utf-8' src='rw_common/plugins/stacks/jquery-2.2.4.min.js?rwcache=774334763'></script>
+        
+        <link rel="stylesheet" href="rw_common/plugins/stacks/font-awesome.min.css?rwcache=774334763">
+        
+		
+		<script type='text/javascript' charset='utf-8' src='files/stacks_page_page0.js?rwcache=774334763'></script>
+        <meta name="formatter" content="Stacks v4.3.0 (6300)" >
+		<meta class="stacks 4 stack version" id="com.elixir.stacks.foundry" name="Foundry" content="2.4.5.0">
+		
+
+
+</head>
+
+<body class="antialiased">
+  <div class="blur_wrapper">
+
+  	
+<div id='stacks_out_1' class='stacks_top'><div id='stacks_in_1' class=''><div id='stacks_out_4' class='stacks_out'><div id='stacks_in_4' class='stacks_in com_elixir_stacks_foundry_stack'>
+
+
+
+
+<!-- Foundry -->
+
+
+</div></div><div id='stacks_out_2' class='stacks_out'><div id='stacks_in_2' class='stacks_in html_stack'><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Grid Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #d9eaff;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0 3px;
+    }
+
+    input, select {
+      padding: 7px;
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .group-label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px 5px 20px 0;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      background: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #preview {
+      border: 1px solid #ccc;
+      background: #fff;
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>Graphic Layout Calculator with Grid Preview</h2>
+
+  <div class="grid">
+    <div>
+      <label for="unit">Units:</label>
+      <select id="unit">
+	<option value="in">Inches (in)</option>
+        <option value="px">Pixels (px)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="artboardWidth">Artboard Width:</label>
+      <input type="number" id="artboardWidth" placeholder="e.g. 1200" step="0.01">
+    </div>
+    <div>
+      <label for="artboardHeight">Artboard Height:</label>
+      <input type="number" id="artboardHeight" placeholder="e.g. 800" step="0.01">
+    </div>
+
+    <div>
+      <label for="columns">Columns:</label>
+      <input type="number" id="columns" placeholder="e.g. 12">
+    </div>
+    <div>
+      <label for="rows">Rows:</label>
+      <input type="number" id="rows" placeholder="e.g. 8">
+    </div>
+    <div>
+      <label for="gutter">Gutter Size:</label>
+      <input type="number" id="gutter" placeholder="e.g. 20" step="0.01">
+    </div>
+
+    <div class="group-label">Margins (Top, Right, Bottom, Left)</div>
+    <div><label>Top:</label><input type="number" id="marginTop" step="0.01"></div>
+    <div><label>Right:</label><input type="number" id="marginRight" step="0.01"></div>
+    <div><label>Bottom:</label><input type="number" id="marginBottom" step="0.01"></div>
+    <div><label>Left:</label><input type="number" id="marginLeft" step="0.01"></div>
+
+    <div class="group-label">Padding inside cells (Top, Right, Bottom, Left)</div>
+    <div><label>Top:</label><input type="number" id="paddingTop" step="0.01"></div>
+    <div><label>Right:</label><input type="number" id="paddingRight" step="0.01"></div>
+    <div><label>Bottom:</label><input type="number" id="paddingBottom" step="0.01"></div>
+    <div><label>Left:</label><input type="number" id="paddingLeft" step="0.01"></div>
+  </div>
+
+<button onclick="calculateLayout()">Calculate & Preview</button>
+<button onclick="downloadCanvas()">Download PNG</button>
+<button onclick="clearAll()">Clear / Reset</button>
+  <div class="output" id="result"></div>
+  <canvas id="preview" width="800" height="600"></canvas>
+
+  <script>
+function clearAll() {
+  const fields = [
+    'artboardWidth', 'artboardHeight', 'columns', 'rows', 'gutter',
+    'marginTop', 'marginRight', 'marginBottom', 'marginLeft',
+    'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'
+  ];
+
+  fields.forEach(id => document.getElementById(id).value = '');
+  document.getElementById('result').innerHTML = '';
+  const canvas = document.getElementById('preview');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+async function generatePDF() {
+  const { jsPDF } = window.jspdf;
+  const canvas = document.getElementById('preview');
+  const pdf = new jsPDF({
+    orientation: "landscape",
+    unit: "px",
+    format: [canvas.width, canvas.height]
+  });
+
+  const imgData = canvas.toDataURL("image/png");
+  pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+  pdf.save("layout-grid.pdf");
+}
+
+    const INCH_TO_PX = 96;
+
+    function convertToPx(val, unit) {
+      return unit === 'in' ? val * INCH_TO_PX : val;
+    }
+
+    function convertFromPx(val, unit) {
+      return unit === 'in' ? val / INCH_TO_PX : val;
+    }
+
+    function getBoxValues(prefix, unit) {
+      return [
+        convertToPx(parseFloat(document.getElementById(prefix + 'Top').value || 0), unit),
+        convertToPx(parseFloat(document.getElementById(prefix + 'Right').value || 0), unit),
+        convertToPx(parseFloat(document.getElementById(prefix + 'Bottom').value || 0), unit),
+        convertToPx(parseFloat(document.getElementById(prefix + 'Left').value || 0), unit),
+      ];
+    }
+
+    function calculateLayout() {
+      const unit = document.getElementById('unit').value;
+
+      const artboardW = convertToPx(parseFloat(document.getElementById('artboardWidth').value), unit);
+      const artboardH = convertToPx(parseFloat(document.getElementById('artboardHeight').value), unit);
+      const columns = parseInt(document.getElementById('columns').value);
+      const rows = parseInt(document.getElementById('rows').value);
+      const gutter = convertToPx(parseFloat(document.getElementById('gutter').value), unit);
+
+      const margin = getBoxValues('margin', unit);
+      const padding = getBoxValues('padding', unit);
+
+      const usableW = artboardW - margin[1] - margin[3];
+      const usableH = artboardH - margin[0] - margin[2];
+
+      const totalGutterW = gutter * (columns - 1);
+      const totalGutterH = gutter * (rows - 1);
+
+      const colW = (usableW - totalGutterW) / columns;
+      const rowH = (usableH - totalGutterH) / rows;
+
+      document.getElementById('result').innerHTML = `
+        <strong>Results:</strong><br>
+        Column Width: <b>${convertFromPx(colW, unit).toFixed(4)} ${unit}</b><br>
+        Row Height: <b>${convertFromPx(rowH, unit).toFixed(4)} ${unit}</b><br>
+        Total Horizontal Gutter: ${convertFromPx(totalGutterW, unit).toFixed(4)} ${unit}<br>
+        Total Vertical Gutter: ${convertFromPx(totalGutterH, unit).toFixed(4)} ${unit}<br>
+        Margin (T,R,B,L): ${margin.map(m => convertFromPx(m, unit).toFixed(2)).join(', ')} ${unit}<br>
+        Padding (T,R,B,L): ${padding.map(p => convertFromPx(p, unit).toFixed(2)).join(', ')} ${unit}
+      `;
+
+      drawGrid(colW, rowH, columns, rows, gutter, margin, padding, artboardW, artboardH);
+
+    }
+
+    function drawGrid(colW, rowH, cols, rows, gutter, margin, padding, artboardW, artboardH) {
+      const canvas = document.getElementById('preview');
+      const ctx = canvas.getContext('2d');
+      const maxW = 800, maxH = 600;
+      const scale = Math.min(maxW / artboardW, maxH / artboardH);
+
+      canvas.width = artboardW * scale;
+      canvas.height = artboardH * scale;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#e6f0ff";
+      ctx.strokeStyle = "#007bff";
+
+      let startX = margin[3];
+      let startY = margin[0];
+
+      for (let c = 0; c < cols; c++) {
+        let x = startX + c * (colW + gutter);
+        for (let r = 0; r < rows; r++) {
+          let y = startY + r * (rowH + gutter);
+
+          ctx.fillRect(x * scale, y * scale, colW * scale, rowH * scale);
+          ctx.strokeRect(x * scale, y * scale, colW * scale, rowH * scale);
+
+          // inner padding
+          ctx.fillStyle = "#cce0ff";
+          ctx.fillRect(
+            (x + padding[3]) * scale,
+            (y + padding[0]) * scale,
+            (colW - padding[1] - padding[3]) * scale,
+            (rowH - padding[0] - padding[2]) * scale
+          );
+          ctx.fillStyle = "#e6f0ff";
+        }
+      }
+    }
+
+    function downloadCanvas() {
+      const canvas = document.getElementById('preview');
+      const link = document.createElement('a');
+      link.download = 'layout_grid.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html></div></div></div></div>
+
+
+  </div>
+
+  <!-- Base RapidWeaver Javascript -->
+  <script src="rw_common/themes/Foundry/javascript.js?rwcache=774334763"></script>
+
+  <!-- Load jQuery -->
+  <script src="rw_common/themes/Foundry/js/jquery.min.js?rwcache=774334763"></script>
+
+  <!-- Tether.js || used for tooltips -->
+	<script src="rw_common/themes/Foundry/js/tether.min.js?rwcache=774334763"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="rw_common/themes/Foundry/js/bootstrap.min.js?rwcache=774334763"></script>
+
+	<!-- Style variations -->
+	
+
+	<!-- User defined javascript -->
+	
+
+  <!-- User defined styles -->
+	
+
+	<script>
+		// Initializes dropdowns
+		$('.dropdown-toggle').dropdown();
+
+		// Initializes popovers
+		$(function () {
+		  $('[data-toggle="popover"]').popover()
+		});
+	</script>
+
+  <!-- Foundry theme v1.0.1 -->
+
+</body>
+
+</html>
